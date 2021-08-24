@@ -1,0 +1,11 @@
+# Node.js App Example
+
+Aplicação simples utilizada pela equipe para estudo de containerzação.
+
+## Execução
+
+Para executar a aplicação basta utilizar os seguintes comandos:
+- npm run build (yarn build)
+- npm start (yarn start)
+
+Para testar, basta realizar uma requisição GET para o endereço http://localhost:3000
