@@ -12,6 +12,7 @@ class Routes {
 
   private buildExampleRoute() {
     this.routes.get('/', exampleController.getInformation);
+    this.routes.post('/', exampleController.setInformation);
   }
 }
 

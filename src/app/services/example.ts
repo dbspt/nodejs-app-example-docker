@@ -1,19 +1,15 @@
+import ExampleModel from "../models/example";
+import IExample from '../interfaces/example';
+
 class ExampleService {
-  public getInformation() {
-    return [
-      {
-        name: 'Gendalf',
-        age: 29,
-        address: 'Rua Cardeal Arcoverde, 361',
-        job: 'Backend Developer'
-      },
-      {
-        name: 'Homer Simpson',
-        age: 26,
-        address: 'Avenida das Nações Unidas, 1083',
-        job: 'Geography Teacher'
-      }
-    ]
+  public async getInformation(): Promise<IExample[]> {
+    return await ExampleModel.find({});
+  }
+
+  public async setInformation(data: IExample): Promise<IExample>{
+    const example = new ExampleModel(data)
+
+    return await example.save()
   }
 }
 
